@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Примеры разметки — Мануал: Инфографика 1063</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">📊 Мануал: Инфографика 1063</a>
+        <nav class="main-nav">
+            <a href="index.html">Главная</a>
+            <a href="overview.html">Обзор</a>
+            <a href="tz.html">ТЗ</a>
+            <a href="examples.html" class="active">Примеры</a>
+            <a href="errors.html">Частые ошибки</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <a href="index.html" class="back-link">← Назад на главную</a>
+
+    <h1>📚 Примеры разметки</h1>
+    <p class="subtitle">Что НЕ является инфографикой, что берём и как размечать.</p>
+
+    <section class="search-box">
+        <label for="site-search" class="search-label">🔍 Поиск по сайту</label>
+        <input type="text" id="site-search" class="search-input"
+               placeholder="Например: мем, реклама, ИИ, скриншот…" autocomplete="off">
+        <ul id="search-results" class="search-results"></ul>
+    </section>
+
+    <nav class="toc">
+        <h2>Содержание</h2>
+        <ol>
+            <li><a href="#ex-no">Что НЕ берём — контрпримеры</a></li>
+            <li><a href="#ex-ok">Что берём — примеры</a></li>
+            <li><a href="#ex-categories">Примеры по категориям</a></li>
+            <li><a href="#ex-cases">Разобранные кейсы</a></li>
+            <li><a href="#ex-branding">Брендирование</a></li>
+        </ol>
+    </nav>
+
+    <div class="layout-sidebar-left">
+
+        <aside class="sidebar-left">
+            <div class="sidebar-left-title">Разделы</div>
+            <ul class="sidebar-left-nav">
+                <li><a href="#ex-no">Что НЕ берём</a></li>
+                <li><a href="#ex-ok">Что берём</a></li>
+                <li><a href="#ex-categories">Примеры по категориям</a></li>
+                <li><a href="#ex-cases">Разобранные кейсы</a></li>
+                <li><a href="#ex-branding">Брендирование</a></li>
+            </ul>
+        </aside>
+
+        <div class="layout-main"><details class="accordion" id="ex-no" open>
+    <summary>Что НЕ берём — контрпримеры</summary>
+    <div class="accordion-body">
+
+        <p>Эти изображения <strong>не являются инфографикой</strong> и не подходят для сбора. Они помогут быстро распознать типичные ошибки.</p>
+
+        <h3 class="subsection-title">Фото с текстовой плашкой</h3>
+        <div class="ui-screenshot">
+            <a href="images/no-photo-with-text.png" target="_blank">
+                <img src="images/no-photo-with-text.png" alt="Фото с текстовой плашкой — не инфографика">
+            </a>
+            <div class="ui-screenshot-caption">Обычное фото с текстовой плашкой — не инфографика</div>
+        </div>
+
+        <h3 class="subsection-title">Скриншоты интерфейсов без композиции</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-infographic-screenshot.png" target="_blank">
+                <img src="images/not-infographic-screenshot.png" alt="Скриншот интерфейса — не инфографика">
+            </a>
+            <div class="ui-screenshot-caption">Скриншот интерфейса без схем, графиков и визуальных связей</div>
+        </div>
+
+        <h3 class="subsection-title">Рекламные баннеры</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-infographic-banner.png" target="_blank">
+                <img src="images/not-infographic-banner.png" alt="Рекламный баннер — не инфографика">
+            </a>
+            <div class="ui-screenshot-caption">Рекламный баннер с декоративным текстом</div>
+        </div>
+
+        <h3 class="subsection-title">Художественные постеры</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-infographic-poster.png" target="_blank">
+                <img src="images/not-infographic-poster.png" alt="Художественный постер — не инфографика">
+            </a>
+            <div class="ui-screenshot-caption">Художественный постер без визуализации данных</div>
+        </div>
+
+        <h3 class="subsection-title">Страницы книг со сплошным текстом</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-infographic-text.png" target="_blank">
+                <img src="images/not-infographic-text.png" alt="Страница книги со сплошным текстом">
+            </a>
+            <div class="ui-screenshot-caption">Страница книги со сплошным текстом — не инфографика</div>
+        </div>
+
+        <h3 class="subsection-title">Фото инфографики с искажениями</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-book-hands.png" target="_blank">
+                <img src="images/not-book-hands.png" alt="Фото книги с пальцами — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Видны пальцы, идёт искажение текста от страниц</div>
+        </div>
+
+        <h3 class="subsection-title">Реклама инфографики — видна среда</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-advertising-presentation.png" target="_blank">
+                <img src="images/not-advertising-presentation.png" alt="Реклама презентации — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Реклама презентации — видна среда (ноутбук, стол, растения)</div>
+        </div>
+
+        <h3 class="subsection-title">ИИ-генерация — поплывшие буквы</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-ai-investor.png" target="_blank">
+                <img src="images/not-ai-investor.png" alt="ИИ-инвестор — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Нейросеть, видим поплывшие буквы + инфографика в среде</div>
+        </div>
+
+        <h3 class="subsection-title">Имитация инфографики «в среде»</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-ai-presentation.png" target="_blank">
+                <img src="images/not-ai-presentation.png" alt="Имитация инфографики — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Не берём, имитация инфографики «в среде»</div>
+        </div>
+
+        <h3 class="subsection-title">Фото инфографики — на переднем плане человек</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-chalkboard-man.png" target="_blank">
+                <img src="images/not-chalkboard-man.png" alt="Человек на переднем плане — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Не берём, фото инфографики, но на переднем плане человек</div>
+        </div>
+
+        <h3 class="subsection-title">ИИ-блок-схема</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-ai-flowchart.png" target="_blank">
+                <img src="images/not-ai-flowchart.png" alt="ИИ-блок-схема — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Не берём, нейросеть — Project Flowchart</div>
+        </div>
+
+        <h3 class="subsection-title">Слайд с диаграммами — нечитаемый текст</h3>
+        <div class="ui-screenshot">
+            <a href="images/not-slides-bullets.png" target="_blank">
+                <img src="images/not-slides-bullets.png" alt="Слайд с диаграммами — не берём">
+            </a>
+            <div class="ui-screenshot-caption">Инфографика с диаграммами. При 100% не видно весь текст. Не берём.</div>
+        </div>
+
+    </div>
+</details>
+
+<details class="accordion" id="ex-ok" open>
+    <summary>Что берём — примеры</summary>
+    <div class="accordion-body">
+        <p>Здесь будут примеры подходящей инфографики. <strong>Раздел в работе</strong> — картинки добавим на следующем этапе.</p>
+    </div>
+</details>
+
+<details class="accordion" id="ex-categories" open>
+    <summary>Примеры по категориям инфографики</summary>
+    <div class="accordion-body">
+        <p>Здесь будут примеры по 9 категориям. <strong>Раздел в работе.</strong></p>
+    </div>
+</details>
+
+<details class="accordion" id="ex-cases" open>
+    <summary>Разобранные кейсы</summary>
+    <div class="accordion-body">
+        <p>Здесь будут 3 разобранных кейса. <strong>Раздел в работе.</strong></p>
+    </div>
+</details>
+
+<details class="accordion" id="ex-branding" open>
+    <summary>Брендирование</summary>
+    <div class="accordion-body">
+        <p>Здесь будут примеры брендирования. <strong>Раздел в работе.</strong></p>
+    </div>
+</details>
+
+        </div>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        © 2026 Мануал проекта 1063 · Заявка_1063_image_infographics
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
