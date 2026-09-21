@@ -1320,3 +1320,30 @@ html {
         max-width: 1300px;
     }
 }
+/* ================================================================
+   КРАСНАЯ ПЛАШКА ВНИМАНИЯ (для overview.html)
+   ================================================================ */
+.attention-box {
+    background: #fdecea;
+    border-left: 4px solid #c0392b;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+}
+
+.attention-box .attention-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: #a5321f;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.attention-box p {
+    margin: 0 0 8px;
+    color: #4a3220;
+}
+
+.attention-box p:last-child {
+    margin-bottom: 0;
+}
