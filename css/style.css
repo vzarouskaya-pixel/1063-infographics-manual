@@ -1347,3 +1347,34 @@ html {
 .attention-box p:last-child {
     margin-bottom: 0;
 }
+/* ================================================================
+   ЗЕЛЁНЫЕ ЗАГОЛОВКИ-ПОДЗАГОЛОВКИ (для ТЗ)
+   ================================================================ */
+.subsection-title.green {
+    background: #dff0d8;
+    border-left: 4px solid #4b7a3a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #2e5a1e;
+    font-weight: 700;
+    display: block;
+    margin: 28px 0 14px;
+    border-bottom: none;
+}
+
+/* Ссылки-заголовки, ведущие на examples.html */
+a.subsection-title {
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+a.subsection-title:hover {
+    background: #c8e6b8;
+    transform: translateX(3px);
+}
+
+a.subsection-title::after {
+    content: " →";
+    color: #4b7a3a;
+    font-weight: 700;
+}
