@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Частые ошибки — Мануал: Инфографика 1063</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">📊 Мануал: Инфографика 1063</a>
+        <nav class="main-nav">
+            <a href="index.html">Главная</a>
+            <a href="overview.html">Обзор</a>
+            <a href="tz.html">ТЗ</a>
+            <a href="examples.html">Примеры</a>
+            <a href="errors.html" class="active">Частые ошибки</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <a href="index.html" class="back-link">← Назад на главную</a>
+
+    <h1>🤓 Частые ошибки</h1>
+    <p class="subtitle">15 видов типичных ошибок при разметке инфографики. Каждый вид — с примерами и пояснениями.</p>
+
+    <!-- ПЛАШКА «НЕЛЬЗЯ ЗАГРУЖАТЬ ДВАЖДЫ» -->
+    <div class="big-warning">
+        <p>🚫 Нельзя загружать одно изображение несколько раз! Так НЕ делаем!</p>
+    </div>
+
+    <nav class="toc">
+        <h2>Содержание</h2>
+        <ol>
+            <li><a href="#err-1">Вид 1. Плохое качество инфографики</a></li>
+            <li><a href="#err-2">Вид 2. Мелкий нечитаемый текст</a></li>
+            <li><a href="#err-3">Вид 3. Прозрачный фон в PNG</a></li>
+            <li><a href="#err-4">Вид 4. Неверный язык пула + вотермарка</a></li>
+            <li><a href="#err-5">Вид 5. Вотермарки</a></li>
+            <li><a href="#err-6">Вид 6. Генерации ИИ</a></li>
+            <li><a href="#err-7">Вид 7. Спорное качество, низкая комплексность</a></li>
+            <li><a href="#err-8">Вид 8. Сильная блочность</a></li>
+            <li><a href="#err-9">Вид 9. Снимок экрана: пикселизация, блочность</a></li>
+            <li><a href="#err-10">Вид 10. Сильная постеризация, блочность</a></li>
+            <li><a href="#err-11">Вид 11. Плохое качество, нечёткий текст, рамки</a></li>
+            <li><a href="#err-12">Вид 12. Блочность, низкое качество, нечитаемый текст</a></li>
+            <li><a href="#err-13">Вид 13. Сильная мыльность, пикселизация</a></li>
+            <li><a href="#err-14">Вид 14. Сильная постеризация, очень плохое качество</a></li>
+            <li><a href="#err-15">Вид 15. Неорганичный коллаж, скучная инфографика</a></li>
+        </ol>
+    </nav>
+
+    <!-- ============ ВИД 1 ============ -->
+    <article class="error-case" id="err-1">
+        <h2>Вид 1. Плохое качество инфографики</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Да, у нас есть минимальное разрешение <strong>1080</strong>, но при этом должна быть <strong>читаемость</strong> на изображении. Не должно быть мелких нечитаемых слов или размытого текста. <strong>Пикселизация рядом с текстом</strong> — тоже свидетельство плохого качества.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-quality-1.webp" target="_blank">
+                <img src="images/err-quality-1.webp" alt="Плохое качество — пример 1">
+            </a>
+            <div class="ui-screenshot-caption">Пример плохого качества — Features Roadmap</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-quality-2.webp" target="_blank">
+                <img src="images/err-quality-2.webp" alt="Плохое качество — пример 2">
+            </a>
+            <div class="ui-screenshot-caption">Пример плохого качества — Roadmap template</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-quality-3.webp" target="_blank">
+                <img src="images/err-quality-3.webp" alt="Плохое качество — пример 3">
+            </a>
+            <div class="ui-screenshot-caption">Пример плохого качества — второй вариант</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-quality-4.webp" target="_blank">
+                <img src="images/err-quality-4.webp" alt="Плохое качество — пример 4">
+            </a>
+            <div class="ui-screenshot-caption">Пример плохого качества — второй вариант</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 2 ============ -->
+    <article class="error-case" id="err-2">
+        <h2>Вид 2. Мелкий нечитаемый текст</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>В инструкции есть пункт, что весь текст должен быть <strong>читаем при 100%</strong>. Если при загрузке вы загрузили фото — проверьте его открытием. Если в таком формате вы не можете прочитать текст, нам это <strong>не подходит</strong>!</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-1.webp" target="_blank">
+                <img src="images/err-small-text-1.webp" alt="Мелкий текст — пример 1">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-2.webp" target="_blank">
+                <img src="images/err-small-text-2.webp" alt="Мелкий текст — пример 2">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-3.webp" target="_blank">
+                <img src="images/err-small-text-3.webp" alt="Мелкий текст — пример 3">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-4.webp" target="_blank">
+                <img src="images/err-small-text-4.webp" alt="Мелкий текст — пример 4">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-5.webp" target="_blank">
+                <img src="images/err-small-text-5.webp" alt="Мелкий текст — пример 5">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-small-text-6.webp" target="_blank">
+                <img src="images/err-small-text-6.webp" alt="Мелкий текст — пример 6">
+            </a>
+            <div class="ui-screenshot-caption">Пример мелкого нечитаемого текста</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 3 ============ -->
+    <article class="error-case" id="err-3">
+        <h2>Вид 3. Прозрачный фон в PNG</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p><strong>PNG разрешены</strong> к загрузке, но внимательно смотрим, чтобы не было <strong>прозрачного фона</strong>! Иначе он у вас или <strong>рамкой</strong> неподходящей станет, или <strong>коллажом</strong> как пример, или <strong>фоном</strong> (белым или чёрным).</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-png-alpha-1.webp" target="_blank">
+                <img src="images/err-png-alpha-1.webp" alt="Прозрачный фон в PNG">
+            </a>
+            <div class="ui-screenshot-caption">Пример с прозрачным фоном — не подходит</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 4 ============ -->
+    <article class="error-case" id="err-4">
+        <h2>Вид 4. Неверный язык пула + вотермарка</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Когда вы заходите в проект, в описании указан <strong>ЯЗЫК</strong>, на котором необходимо грузить инфографику. Возможно комбинированные инфографики, где у нас есть целевой язык и дополнительный. Но если вы загрузили в пул с украинским языком инфографику на немецком — это будет считаться <strong>огромной ошибкой</strong>!</p>
+            <p>Данное фото было загружено как раз в пул с украинским языком. Это ошибка. Так же тут <strong>вотермарка</strong>!</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-wrong-lang-1.webp" target="_blank">
+                <img src="images/err-wrong-lang-1.webp" alt="Неверный язык пула + вотермарка">
+            </a>
+            <div class="ui-screenshot-caption">Немецкая инфографика в пуле с украинским языком + вотермарка</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 5 ============ -->
+    <article class="error-case" id="err-5">
+        <h2>Вид 5. Вотермарки</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>По инструкции вотермарки и текст, не относящийся к инфографике (исключение — логотипы бренда / брендирование), это <strong>АРТЕФАКТ</strong>.</p>
+        </div>
+
+        <div class="attention-red">
+            <strong>Запомните:</strong> любые вотермарки, почты, всё что защищает авторство — это запрещено.
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-watermark-1.webp" target="_blank">
+                <img src="images/err-watermark-1.webp" alt="Вотермарки — пример 1">
+            </a>
+            <div class="ui-screenshot-caption">Пример с вотермарками — Statista</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-watermark-2.webp" target="_blank">
+                <img src="images/err-watermark-2.webp" alt="Вотермарки — пример 2">
+            </a>
+            <div class="ui-screenshot-caption">Пример с вотермарками</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-watermark-3.webp" target="_blank">
+                <img src="images/err-watermark-3.webp" alt="Вотермарки — пример 3">
+            </a>
+            <div class="ui-screenshot-caption">Пример с вотермарками — Mind map</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-watermark-4.webp" target="_blank">
+                <img src="images/err-watermark-4.webp" alt="Вотермарки — пример 4">
+            </a>
+            <div class="ui-screenshot-caption">Пример с вотермарками — GMK Center</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-watermark-5.webp" target="_blank">
+                <img src="images/err-watermark-5.webp" alt="Вотермарки — пример 5">
+            </a>
+            <div class="ui-screenshot-caption">Пример с вотермарками</div>
+        </div>
+    </article>    <!-- ============ ВИД 6 ============ -->
+    <article class="error-case" id="err-6">
+        <h2>Вид 6. Генерации ИИ</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Данные изображения относятся к хорошим таким примерам ИИ. Кто-то хотел защитить свою работу и через ИИ прогнал на создание водяных знаков, но ИИ решила ещё и качество подпортить. На примерах мы видим <strong>слипшийся текст</strong>, где-то вообще <strong>искажённый до неузнаваемости</strong>.</p>
+            <p>Следим за этим! Мы <strong>не можем учить нейросеть на ошибках другой нейросети</strong>! Даже если ошибок нет, но вы видите, что это нейросеть создала — такое тоже не надо.</p>
+        </div>
+
+        <div class="attention-red">
+            <strong>Сомневаетесь — присылайте в чат ТГ, мы подскажем, ИИ это или нет.</strong>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-ai-1.webp" target="_blank">
+                <img src="images/err-ai-1.webp" alt="ИИ-генерация — пример 1">
+            </a>
+            <div class="ui-screenshot-caption">Пример ИИ-генерации — слипшийся текст</div>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-ai-2.webp" target="_blank">
+                <img src="images/err-ai-2.webp" alt="ИИ-генерация — пример 2">
+            </a>
+            <div class="ui-screenshot-caption">Пример ИИ-генерации — искажённый текст</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 7 ============ -->
+    <article class="error-case" id="err-7">
+        <h2>Вид 7. Спорное качество, низкая комплексность</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p><strong>Спорное качество, но низкая комплексность</strong> — не берём в разметку.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-poor-quality-1.webp" target="_blank">
+                <img src="images/err-poor-quality-1.webp" alt="Спорное качество — пример">
+            </a>
+            <div class="ui-screenshot-caption">Спорное качество, низкая комплексность — не берём</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 8 ============ -->
+    <article class="error-case" id="err-8">
+        <h2>Вид 8. Сильная блочность</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Данное изображение <strong>не подходит в разметку из-за сильной блочности</strong>.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-blocking-1.webp" target="_blank">
+                <img src="images/err-blocking-1.webp" alt="Сильная блочность — пример">
+            </a>
+            <div class="ui-screenshot-caption">Сильная блочность — не подходит</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 9 ============ -->
+    <article class="error-case" id="err-9">
+        <h2>Вид 9. Снимок экрана: пикселизация, блочность</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p><strong>Снимок экрана</strong>, очень сильная <strong>пикселизация / блочность</strong>, очень плохое качество, низкая комплексность.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-screenshot-1.webp" target="_blank">
+                <img src="images/err-screenshot-1.webp" alt="Снимок экрана — пример">
+            </a>
+            <div class="ui-screenshot-caption">Снимок экрана: сильная пикселизация, блочность</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 10 ============ -->
+    <article class="error-case" id="err-10">
+        <h2>Вид 10. Сильная постеризация, блочность</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Очень сильная <strong>постеризация</strong>, <strong>блочность</strong>. Плохое качество видно невооружённым взглядом.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-posterization-1.webp" target="_blank">
+                <img src="images/err-posterization-1.webp" alt="Постеризация — пример">
+            </a>
+            <div class="ui-screenshot-caption">Сильная постеризация, блочность</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 11 ============ -->
+    <article class="error-case" id="err-11">
+        <h2>Вид 11. Плохое качество, нечёткий текст, рамки</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Плохое качество, контур <strong>лессенкой</strong> — доказательство, <strong>нечёткий текст</strong>, и <strong>рамки не подходящие по апгрейду</strong>.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-blurred-1.webp" target="_blank">
+                <img src="images/err-blurred-1.webp" alt="Плохое качество, нечёткий текст, рамки">
+            </a>
+            <div class="ui-screenshot-caption">Плохое качество, нечёткий текст, неподходящие рамки</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 12 ============ -->
+    <article class="error-case" id="err-12">
+        <h2>Вид 12. Блочность, низкое качество, нечитаемый текст</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p><strong>Блочность</strong>, <strong>низкое качество изображения</strong>, <strong>нечитаемый текст</strong>.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-blocking-2.webp" target="_blank">
+                <img src="images/err-blocking-2.webp" alt="Блочность, низкое качество, нечитаемый текст">
+            </a>
+            <div class="ui-screenshot-caption">Блочность, низкое качество, нечитаемый текст</div>
+        </div>
+    </article>    <!-- ============ ВИД 13 ============ -->
+    <article class="error-case" id="err-13">
+        <h2>Вид 13. Сильная мыльность, пикселизация</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Очень сильная <strong>мыльность</strong>, <strong>пикселизация</strong>. Плохое качество видно невооружённым взглядом.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-blurred-2.webp" target="_blank">
+                <img src="images/err-blurred-2.webp" alt="Сильная мыльность, пикселизация">
+            </a>
+            <div class="ui-screenshot-caption">Сильная мыльность, пикселизация — не подходит</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 14 ============ -->
+    <article class="error-case" id="err-14">
+        <h2>Вид 14. Сильная постеризация, очень плохое качество</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p>Сильная <strong>постеризация</strong>, <strong>очень плохое качество</strong>.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-posterization-2.webp" target="_blank">
+                <img src="images/err-posterization-2.webp" alt="Сильная постеризация, очень плохое качество">
+            </a>
+            <div class="ui-screenshot-caption">Сильная постеризация, очень плохое качество</div>
+        </div>
+    </article>
+
+    <!-- ============ ВИД 15 ============ -->
+    <article class="error-case" id="err-15">
+        <h2>Вид 15. Неорганичный коллаж, скучная инфографика</h2>
+
+        <div class="example-block explanation">
+            <div class="example-label">💡 Что не так</div>
+            <p><strong>Неорганичный коллаж</strong>, <strong>скучная инфографика</strong> — не берём.</p>
+        </div>
+
+        <div class="ui-screenshot">
+            <a href="images/err-collage-1.webp" target="_blank">
+                <img src="images/err-collage-1.webp" alt="Неорганичный коллаж, скучная инфографика">
+            </a>
+            <div class="ui-screenshot-caption">Неорганичный коллаж, скучная инфографика</div>
+        </div>
+    </article>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        © 2026 Мануал проекта 1063 · Заявка_1063_image_infographics
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
