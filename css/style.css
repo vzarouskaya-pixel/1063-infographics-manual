@@ -1458,3 +1458,33 @@ h4.subsection-title a:hover,
     font-weight: 700;
     margin-left: 4px;
 }
+/* ================================================================
+   БОЛЬШАЯ ЦВЕТНАЯ ПЛАШКА (для errors.html)
+   ================================================================ */
+.big-warning {
+    background: linear-gradient(135deg, #fdecea 0%, #fbe0dd 100%);
+    border-left: 6px solid #c0392b;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 24px 0 40px;
+    box-shadow: 0 4px 16px rgba(192, 57, 43, 0.12);
+}
+
+.big-warning p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #a5321f;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+    .big-warning {
+        padding: 18px 20px;
+    }
+    .big-warning p {
+        font-size: 18px;
+    }
+}
