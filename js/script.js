@@ -1,4 +1,26 @@
 /* ================================================================
+   ТЕСТЫ: проверка ответа на вопрос
+   ================================================================ */
+function checkAnswer(button, isCorrect) {
+    const parent = button.parentElement;
+    parent.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.classList.remove('correct', 'wrong');
+        btn.disabled = true;
+    });
+
+    if (isCorrect) {
+        button.classList.add('correct');
+    } else {
+        button.classList.add('wrong');
+        parent.querySelectorAll('.quiz-option').forEach(btn => {
+            if (btn.getAttribute('onclick').includes('true')) {
+                btn.classList.add('correct');
+            }
+        });
+    }
+}
+
+/* ================================================================
    ПОИСК ПО САЙТУ
    ================================================================
    Живой фильтр по ключевым словам. Работает без сервера.
@@ -48,12 +70,32 @@ const searchIndex = [
     // ===== Раздел 7: Примеры =====
     { title: "Примеры разметки", page: "examples.html", anchor: "", keywords: "пример видеореклама россия панама canal chicken rolls разметка кейс" },
 
-    // ===== Частые ошибки =====
-    { title: "Частые ошибки", page: "errors.html", anchor: "", keywords: "ошибки артефакты шум блочность неверный выбор ИИ нейросеть вотермарка" }
-];
+    // ===== Разделы страницы Примеры =====
+    { title: "Что НЕ берём — контрпримеры", page: "examples.html", anchor: "#ex-no", keywords: "мем реклама постер сплошной текст не берём контрпример" },
+    { title: "Что берём — примеры", page: "examples.html", anchor: "#ex-ok", keywords: "берём примеры roadmap caldo бизнес-слайд" },
+    { title: "Разобранные кейсы", page: "examples.html", anchor: "#ex-cases", keywords: "кейс видеореклама панама chicken rolls разбор" },
+    { title: "Примеры по категориям", page: "examples.html", anchor: "#ex-categories", keywords: "категории примеры диаграммы схемы mind map слайды плакаты таблицы инструкции навигация чек-листы" },
+    { title: "Брендирование", page: "examples.html", anchor: "#ex-branding", keywords: "брендирование логотип фирменный стиль freepik альфа-банк" },
 
-/* ---------- Нормализация латиницы ↔ кириллицы ----------
-   Позволяет искать CC08 и СС08 (кириллицей), DPD и ДПД, и т.д.
+    // ===== Частые ошибки (страница errors.html) =====
+    { title: "Вид 1: Плохое качество инфографики", page: "errors.html", anchor: "#err-1", keywords: "ошибка качество плохое разрешение 1080 пикселизация размытие" },
+    { title: "Вид 2: Мелкий нечитаемый текст", page: "errors.html", anchor: "#err-2", keywords: "ошибка мелкий текст нечитаемый при 100% читаемость" },
+    { title: "Вид 3: Прозрачный фон в PNG", page: "errors.html", anchor: "#err-3", keywords: "ошибка png прозрачный фон альфа рамка коллаж белый чёрный" },
+    { title: "Вид 4: Неверный язык пула + вотермарка", page: "errors.html", anchor: "#err-4", keywords: "ошибка язык пула кириллица украинский немецкий не тот язык вотермарка" },
+    { title: "Вид 5: Вотермарки", page: "errors.html", anchor: "#err-5", keywords: "ошибка вотермарка водяной знак авторство почты защита запрещено артефакт" },
+    { title: "Вид 6: Генерации ИИ", page: "errors.html", anchor: "#err-6", keywords: "ошибка ии нейросеть генерация слипшийся текст искажённый тг" },
+    { title: "Вид 7: Спорное качество, низкая комплексность", page: "errors.html", anchor: "#err-7", keywords: "ошибка спорное качество низкая комплексность не берём" },
+    { title: "Вид 8: Сильная блочность", page: "errors.html", anchor: "#err-8", keywords: "ошибка блочность блоки сжатие не подходит" },
+    { title: "Вид 9: Снимок экрана: пикселизация, блочность", page: "errors.html", anchor: "#err-9", keywords: "ошибка снимок экрана пикселизация блочность плохое качество комплексность" },
+    { title: "Вид 10: Сильная постеризация, блочность", page: "errors.html", anchor: "#err-10", keywords: "ошибка постеризация блочность плохое качество" },
+    { title: "Вид 11: Плохое качество, нечёткий текст, рамки", page: "errors.html", anchor: "#err-11", keywords: "ошибка плохое качество нечёткий текст рамки апгрейд лессенка" },
+    { title: "Вид 12: Блочность, низкое качество, нечитаемый текст", page: "errors.html", anchor: "#err-12", keywords: "ошибка блочность низкое качество нечитаемый текст" },
+    { title: "Вид 13: Сильная мыльность, пикселизация", page: "errors.html", anchor: "#err-13", keywords: "ошибка мыльность пикселизация плохое качество" },
+    { title: "Вид 14: Сильная постеризация, очень плохое качество", page: "errors.html", anchor: "#err-14", keywords: "ошибка постеризация очень плохое качество" },
+    { title: "Вид 15: Неорганичный коллаж, скучная инфографика", page: "errors.html", anchor: "#err-15", keywords: "ошибка коллаж неорганичный скучная инфографика" }
+];/* ---------- Нормализация латиницы ↔ кириллицы ----------
+   Позволяет искать CC08 и СС08 (кириллицей), DPD и ДПД,
+   U2U и U2U (в обоих алфавитах) и т.д.
    Применяется ТОЛЬКО к коротким строкам, чтобы не портить
    обычные русские слова (например, «срок»).
 ---------------------------------------------------------- */
@@ -67,13 +109,19 @@ function normalizeShort(str) {
     return str.replace(/[саеорхуквнмт]/g, ch => CYR_TO_LAT_MAP[ch] || ch);
 }
 
+/* Приводит строку к виду, пригодному для сравнения:
+   - нижний регистр
+   - убирает лишние пробелы
+   - для коротких строк (≤ 6 символов) нормализует кириллицу */
 function makeSearchString(str) {
     const cleaned = str.toLowerCase().trim().replace(/\s+/g, ' ');
     if (cleaned.length <= 6) {
         return normalizeShort(cleaned);
     }
     return cleaned;
-}function initSearch() {
+}
+
+function initSearch() {
     const input = document.getElementById('site-search');
     const results = document.getElementById('search-results');
     if (!input || !results) return;
@@ -82,12 +130,15 @@ function makeSearchString(str) {
     const preparedIndex = searchIndex.map(item => ({
         ...item,
         _titleNorm: makeSearchString(item.title),
-        _keywordsNorm: makeSearchString(item.keywords)
+        _keywordsNorm: makeSearchString(item.keywords),
+        _titleRaw: item.title.toLowerCase(),
+        _keywordsRaw: item.keywords.toLowerCase()
     }));
 
     input.addEventListener('input', () => {
         const raw = input.value.trim();
         const q = makeSearchString(raw);
+        const qRaw = raw.toLowerCase().trim().replace(/\s+/g, ' ');
 
         results.innerHTML = '';
 
@@ -96,8 +147,14 @@ function makeSearchString(str) {
             return;
         }
 
+        // Двойной поиск:
+        // 1) по нормализованной строке (CC08 → СС08)
+        // 2) по исходной строке «как есть» (КГТ → КГТ)
         const found = preparedIndex.filter(item =>
-            item._titleNorm.includes(q) || item._keywordsNorm.includes(q)
+            item._titleNorm.includes(q) ||
+            item._keywordsNorm.includes(q) ||
+            item._titleRaw.includes(qRaw) ||
+            item._keywordsRaw.includes(qRaw)
         ).slice(0, 10);
 
         if (found.length === 0) {
@@ -133,21 +190,26 @@ function makeSearchString(str) {
 }
 
 document.addEventListener('DOMContentLoaded', initSearch);/* ================================================================
-   ТЕСТЫ (заготовка на будущее — если решим сделать tests.html)
+   ТЕСТЫ: интерактивная логика со счётчиком и разбором
+   ================================================================
+   Работает для tests.html. Активна только если на странице есть
+   элементы с классом .quiz и id="quiz-progress".
    ================================================================ */
 
 const QUIZ_TOTAL = 10;
 
+/* Храним ответы пользователя по каждому вопросу */
 const quizState = {
-    answers: {},
+    answers: {}, // { вопросIndex: { chosenText, isCorrect, correctText, note } }
     total: 0,
     right: 0
 };
 
 function initQuiz() {
     const progress = document.getElementById('quiz-progress');
-    if (!progress) return;
+    if (!progress) return; // на этой странице тестов нет
 
+    // Обход всех вопросов
     const quizzes = document.querySelectorAll('.quiz');
 
     quizzes.forEach((quiz, index) => {
@@ -156,11 +218,13 @@ function initQuiz() {
 
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
+                // если уже отвечено — ничего не делаем
                 if (quiz.dataset.answered === 'true') return;
 
                 const isCorrect = btn.dataset.correct === 'true';
                 const chosenText = btn.textContent.trim();
 
+                // найти правильный вариант
                 let correctText = '';
                 let note = '';
                 buttons.forEach(b => {
@@ -170,6 +234,7 @@ function initQuiz() {
                 });
                 if (noteEl) note = noteEl.textContent.trim();
 
+                // подсветить всё
                 buttons.forEach(b => {
                     b.disabled = true;
                     if (b.dataset.correct === 'true') {
@@ -184,6 +249,7 @@ function initQuiz() {
                     btn.classList.add('chosen-wrong');
                 }
 
+                // запомнить ответ
                 quizState.answers[index] = {
                     chosenText,
                     isCorrect,
@@ -198,6 +264,7 @@ function initQuiz() {
         });
     });
 
+    // Сброс
     const resetBtn = document.getElementById('quiz-reset');
     if (resetBtn) {
         resetBtn.addEventListener('click', resetQuiz);
@@ -206,11 +273,16 @@ function initQuiz() {
 
 function updateProgress() {
     const counter = document.getElementById('quiz-counter');
-    if (counter) counter.textContent = quizState.right;
+    if (counter) {
+        counter.textContent = quizState.right;
+    }
 
     const totalEl = document.getElementById('quiz-answered');
-    if (totalEl) totalEl.textContent = quizState.total;
+    if (totalEl) {
+        totalEl.textContent = quizState.total;
+    }
 
+    // Если ответили на все — показать финал
     if (quizState.total === QUIZ_TOTAL) {
         showFinalReview();
     }
@@ -240,6 +312,7 @@ function showFinalReview() {
 
     html += '<h2 style="font-family: \'Playfair Display\', Georgia, serif; font-size: 22px; color: #4a2c14; margin: 24px 0 12px;">Разбор ответов</h2>';
 
+    // Пробегаем по всем вопросам по порядку
     document.querySelectorAll('.quiz').forEach((quiz, index) => {
         const titleEl = quiz.querySelector('h3');
         const title = titleEl ? titleEl.textContent.trim() : ('Вопрос ' + (index + 1));
@@ -271,10 +344,12 @@ function showFinalReview() {
 }
 
 function resetQuiz() {
+    // Сбросить состояние
     quizState.answers = {};
     quizState.total = 0;
     quizState.right = 0;
 
+    // Обход вопросов — снять подсветку
     document.querySelectorAll('.quiz').forEach(quiz => {
         quiz.dataset.answered = 'false';
         quiz.querySelectorAll('.quiz-option').forEach(btn => {
@@ -283,6 +358,7 @@ function resetQuiz() {
         });
     });
 
+    // Очистить финальный блок
     const review = document.getElementById('quiz-review');
     if (review) review.innerHTML = '';
 
