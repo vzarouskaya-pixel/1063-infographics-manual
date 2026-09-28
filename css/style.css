@@ -1488,3 +1488,22 @@ h4.subsection-title a:hover,
         font-size: 18px;
     }
 }
+/* ================================================================
+   УМЕНЬШЕННЫЕ СКРИНШОТЫ (для блока «Название пула» в overview.html)
+   ================================================================ */
+.ui-screenshot-narrow {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-screenshot-narrow img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.ui-screenshot-narrow a {
+    display: block;
+    text-align: center;
+}
