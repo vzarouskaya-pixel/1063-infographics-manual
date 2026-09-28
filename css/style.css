@@ -1507,3 +1507,22 @@ h4.subsection-title a:hover,
     display: block;
     text-align: center;
 }
+/* ================================================================
+   ЕЩЁ БОЛЕЕ УЗКИЕ СКРИНШОТЫ (для блока «Интерфейс разметки»)
+   ================================================================ */
+.ui-screenshot-mid {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-screenshot-mid img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.ui-screenshot-mid a {
+    display: block;
+    text-align: center;
+}
