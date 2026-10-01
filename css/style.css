@@ -1526,3 +1526,22 @@ h4.subsection-title a:hover,
     display: block;
     text-align: center;
 }
+/* ================================================================
+   ЖЁЛТАЯ ПЛАШКА С КРАСНЫМ ТЕКСТОМ (для overview.html)
+   ================================================================ */
+.note-box.note-danger p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #c0392b;
+    text-align: center;
+}
+
+.note-box.note-danger p.note-sub {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b5440;
+    font-style: italic;
+    margin-top: 8px;
+}
