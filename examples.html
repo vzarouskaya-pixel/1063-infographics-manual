@@ -51,17 +51,87 @@
 
         <aside class="sidebar-left">
             <div class="sidebar-left-title">Разделы</div>
-            <ul class="sidebar-left-nav">
-                <li><a href="#ex-no">Что НЕ берём</a></li>
-                <li><a href="#ex-ok">Что берём</a></li>
-                <li><a href="#ex-cases">Разобранные кейсы</a></li>
-                <li><a href="#ex-categories">Примеры по категориям</a></li>
-                <li><a href="#ex-branding">Брендирование</a></li>
+            <ul class="sidebar-tree">
+
+                <li>
+                    <details open>
+                        <summary>Что НЕ берём</summary>
+                        <ul>
+                            <li><a href="#ex-no">К разделу целиком</a></li>
+                            <li><a href="#ex-no-photo-text">Фото с текстовой плашкой</a></li>
+                            <li><a href="#ex-no-screens">Скриншоты интерфейсов без композиции</a></li>
+                            <li><a href="#ex-no-banners">Рекламные баннеры</a></li>
+                            <li><a href="#ex-no-posters">Художественные постеры</a></li>
+                            <li><a href="#ex-no-books">Страницы книг со сплошным текстом</a></li>
+                            <li><a href="#ex-no-book-hands">Фото инфографики с искажениями</a></li>
+                            <li><a href="#ex-no-ads-presentation">Реклама инфографики — видна среда</a></li>
+                            <li><a href="#ex-no-ai-investor">ИИ-генерация — поплывшие буквы</a></li>
+                            <li><a href="#ex-no-ai-presentation">Имитация инфографики «в среде»</a></li>
+                            <li><a href="#ex-no-chalkboard">Фото инфографики — человек на переднем плане</a></li>
+                            <li><a href="#ex-no-ai-flowchart">ИИ-блок-схема</a></li>
+                            <li><a href="#ex-no-slides-bullets">Слайд с диаграммами — нечитаемый текст</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details open>
+                        <summary>Что берём</summary>
+                        <ul>
+                            <li><a href="#ex-ok">К разделу целиком</a></li>
+                            <li><a href="#ex-ok-roadmap">Пошаговая инструкция — Roadmap</a></li>
+                            <li><a href="#ex-ok-caldo">CALDO Tech — доходы и реклама</a></li>
+                            <li><a href="#ex-ok-business">Карта деловой среды — бизнес-слайд</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details open>
+                        <summary>Разобранные кейсы</summary>
+                        <ul>
+                            <li><a href="#ex-cases">К разделу целиком</a></li>
+                            <li><a href="#ex-case-video">Кейс 1. Видеореклама в России</a></li>
+                            <li><a href="#ex-case-panama">Кейс 2. Panama Canal Traffic</a></li>
+                            <li><a href="#ex-case-chicken">Кейс 3. Street-Style Chicken Rolls</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details open>
+                        <summary>Примеры по категориям</summary>
+                        <ul>
+                            <li><a href="#ex-categories">К разделу целиком</a></li>
+                            <li><a href="#ex-cat-1">5.1. Графики и диаграммы</a></li>
+                            <li><a href="#ex-cat-2">5.2. Схемы процессов и структур</a></li>
+                            <li><a href="#ex-cat-3">5.3. Mind maps, roadmaps, графы</a></li>
+                            <li><a href="#ex-cat-4">5.4. Презентационные слайды</a></li>
+                            <li><a href="#ex-cat-5">5.5. Плакаты, лонгриды</a></li>
+                            <li><a href="#ex-cat-6">5.6. Таблицы, матрицы, сравнения</a></li>
+                            <li><a href="#ex-cat-7">5.7. Инструкции и пошаговые гайды</a></li>
+                            <li><a href="#ex-cat-8">5.8. Навигационные схемы</a></li>
+                            <li><a href="#ex-cat-9">5.9. Чек-листы</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <details open>
+                        <summary>Брендирование</summary>
+                        <ul>
+                            <li><a href="#ex-branding">К разделу целиком</a></li>
+                            <li><a href="#ex-brand-export">Пример: сельхозпродукция</a></li>
+                            <li><a href="#ex-brand-freepik">Авторство вместо бренда (Freepik)</a></li>
+                            <li><a href="#ex-brand-alfa">Альфа-Банк — фирменный стиль</a></li>
+                        </ul>
+                    </details>
+                </li>
+
             </ul>
         </aside>
 
         <div class="layout-main">
-
 <!-- ============ ЧТО НЕ БЕРЁМ ============ -->
 <details class="accordion" id="ex-no" open>
     <summary>Что НЕ берём — контрпримеры</summary>
@@ -69,7 +139,7 @@
 
         <p>Эти изображения <strong>не являются инфографикой</strong> и не подходят для сбора. Они помогут быстро распознать типичные ошибки.</p>
 
-        <h3 class="subsection-title green">Фото с текстовой плашкой</h3>
+        <h3 class="subsection-title green" id="ex-no-photo-text">Фото с текстовой плашкой</h3>
         <div class="ui-screenshot">
             <a href="images/no-photo-with-text.png" target="_blank">
                 <img src="images/no-photo-with-text.png" alt="Фото с текстовой плашкой — не инфографика">
@@ -77,7 +147,7 @@
             <div class="ui-screenshot-caption">Обычное фото с текстовой плашкой — не инфографика</div>
         </div>
 
-        <h3 class="subsection-title green">Скриншоты интерфейсов без композиции</h3>
+        <h3 class="subsection-title green" id="ex-no-screens">Скриншоты интерфейсов без композиции</h3>
         <div class="ui-screenshot">
             <a href="images/not-infographic-screenshot.png" target="_blank">
                 <img src="images/not-infographic-screenshot.png" alt="Скриншот интерфейса — не инфографика">
@@ -85,7 +155,7 @@
             <div class="ui-screenshot-caption">Скриншот интерфейса без схем, графиков и визуальных связей</div>
         </div>
 
-        <h3 class="subsection-title green">Рекламные баннеры</h3>
+        <h3 class="subsection-title green" id="ex-no-banners">Рекламные баннеры</h3>
         <div class="ui-screenshot">
             <a href="images/not-infographic-banner.png" target="_blank">
                 <img src="images/not-infographic-banner.png" alt="Рекламный баннер — не инфографика">
@@ -93,7 +163,7 @@
             <div class="ui-screenshot-caption">Рекламный баннер с декоративным текстом</div>
         </div>
 
-        <h3 class="subsection-title green">Художественные постеры</h3>
+        <h3 class="subsection-title green" id="ex-no-posters">Художественные постеры</h3>
         <div class="ui-screenshot">
             <a href="images/not-infographic-poster.png" target="_blank">
                 <img src="images/not-infographic-poster.png" alt="Художественный постер — не инфографика">
@@ -101,7 +171,7 @@
             <div class="ui-screenshot-caption">Художественный постер без визуализации данных</div>
         </div>
 
-        <h3 class="subsection-title green">Страницы книг со сплошным текстом</h3>
+        <h3 class="subsection-title green" id="ex-no-books">Страницы книг со сплошным текстом</h3>
         <div class="ui-screenshot">
             <a href="images/not-infographic-text.png" target="_blank">
                 <img src="images/not-infographic-text.png" alt="Страница книги со сплошным текстом">
@@ -109,7 +179,7 @@
             <div class="ui-screenshot-caption">Страница книги со сплошным текстом — не инфографика</div>
         </div>
 
-        <h3 class="subsection-title green">Фото инфографики с искажениями</h3>
+        <h3 class="subsection-title green" id="ex-no-book-hands">Фото инфографики с искажениями</h3>
         <div class="ui-screenshot">
             <a href="images/not-book-hands.png" target="_blank">
                 <img src="images/not-book-hands.png" alt="Фото книги с пальцами — не берём">
@@ -117,7 +187,7 @@
             <div class="ui-screenshot-caption">Видны пальцы, идёт искажение текста от страниц</div>
         </div>
 
-        <h3 class="subsection-title green">Реклама инфографики — видна среда</h3>
+        <h3 class="subsection-title green" id="ex-no-ads-presentation">Реклама инфографики — видна среда</h3>
         <div class="ui-screenshot">
             <a href="images/not-advertising-presentation.png" target="_blank">
                 <img src="images/not-advertising-presentation.png" alt="Реклама презентации — не берём">
@@ -125,7 +195,7 @@
             <div class="ui-screenshot-caption">Реклама презентации — видна среда (ноутбук, стол, растения)</div>
         </div>
 
-        <h3 class="subsection-title green">ИИ-генерация — поплывшие буквы</h3>
+        <h3 class="subsection-title green" id="ex-no-ai-investor">ИИ-генерация — поплывшие буквы</h3>
         <div class="ui-screenshot">
             <a href="images/not-ai-investor.png" target="_blank">
                 <img src="images/not-ai-investor.png" alt="ИИ-инвестор — не берём">
@@ -133,7 +203,7 @@
             <div class="ui-screenshot-caption">Нейросеть, видим поплывшие буквы + инфографика в среде</div>
         </div>
 
-        <h3 class="subsection-title green">Имитация инфографики «в среде»</h3>
+        <h3 class="subsection-title green" id="ex-no-ai-presentation">Имитация инфографики «в среде»</h3>
         <div class="ui-screenshot">
             <a href="images/not-ai-presentation.png" target="_blank">
                 <img src="images/not-ai-presentation.png" alt="Имитация инфографики — не берём">
@@ -141,7 +211,7 @@
             <div class="ui-screenshot-caption">Не берём, имитация инфографики «в среде»</div>
         </div>
 
-        <h3 class="subsection-title green">Фото инфографики — на переднем плане человек</h3>
+        <h3 class="subsection-title green" id="ex-no-chalkboard">Фото инфографики — на переднем плане человек</h3>
         <div class="ui-screenshot">
             <a href="images/not-chalkboard-man.png" target="_blank">
                 <img src="images/not-chalkboard-man.png" alt="Человек на переднем плане — не берём">
@@ -149,7 +219,7 @@
             <div class="ui-screenshot-caption">Не берём, фото инфографики, но на переднем плане человек</div>
         </div>
 
-        <h3 class="subsection-title green">ИИ-блок-схема</h3>
+        <h3 class="subsection-title green" id="ex-no-ai-flowchart">ИИ-блок-схема</h3>
         <div class="ui-screenshot">
             <a href="images/not-ai-flowchart.png" target="_blank">
                 <img src="images/not-ai-flowchart.png" alt="ИИ-блок-схема — не берём">
@@ -157,7 +227,7 @@
             <div class="ui-screenshot-caption">Не берём, нейросеть — Project Flowchart</div>
         </div>
 
-        <h3 class="subsection-title green">Слайд с диаграммами — нечитаемый текст</h3>
+        <h3 class="subsection-title green" id="ex-no-slides-bullets">Слайд с диаграммами — нечитаемый текст</h3>
         <div class="ui-screenshot">
             <a href="images/not-slides-bullets.png" target="_blank">
                 <img src="images/not-slides-bullets.png" alt="Слайд с диаграммами — не берём">
@@ -175,7 +245,7 @@
 
         <p>Эти изображения <strong>подходят для сбора</strong>: есть структура, читаемый текст, визуальные связи.</p>
 
-        <h3 class="subsection-title green">Пошаговая инструкция — Roadmap</h3>
+        <h3 class="subsection-title green" id="ex-ok-roadmap">Пошаговая инструкция — Roadmap</h3>
         <div class="ui-screenshot">
             <a href="images/ok-roadmap.png" target="_blank">
                 <img src="images/ok-roadmap.png" alt="Roadmap Infographic — берём">
@@ -183,7 +253,7 @@
             <div class="ui-screenshot-caption">Инфографика пошаговой инструкции — берём</div>
         </div>
 
-        <h3 class="subsection-title green">CALDO Tech — доходы и рекламные расходы</h3>
+        <h3 class="subsection-title green" id="ex-ok-caldo">CALDO Tech — доходы и рекламные расходы</h3>
         <div class="ui-screenshot">
             <a href="images/ok-caldo.png" target="_blank">
                 <img src="images/ok-caldo.png" alt="CALDO Tech — берём">
@@ -191,7 +261,7 @@
             <div class="ui-screenshot-caption">Контрастная инфографика, при 100% видно все буквы, есть диаграмма</div>
         </div>
 
-        <h3 class="subsection-title green">Карта деловой среды — бизнес-слайд</h3>
+        <h3 class="subsection-title green" id="ex-ok-business">Карта деловой среды — бизнес-слайд</h3>
         <div class="ui-screenshot">
             <a href="images/ok-business-map.png" target="_blank">
                 <img src="images/ok-business-map.png" alt="Карта деловой среды — берём">
@@ -200,7 +270,8 @@
         </div>
 
     </div>
-</details><!-- ============ РАЗОБРАННЫЕ КЕЙСЫ ============ -->
+</details>
+<!-- ============ РАЗОБРАННЫЕ КЕЙСЫ ============ -->
 <details class="accordion" id="ex-cases" open>
     <summary>Разобранные кейсы</summary>
     <div class="accordion-body">
@@ -208,7 +279,7 @@
         <p>Три разобранных примера — как размечать инфографику по вопросам из <a href="tz.html#sec-6">раздела 6 ТЗ</a>.</p>
 
         <div class="example-case">
-            <h4><a href="images/case-video-ads.png" target="_blank">Кейс 1. Видеореклама в России</a> <span class="case-tag example">Пример</span></h4>
+            <h4 id="ex-case-video"><a href="images/case-video-ads.png" target="_blank">Кейс 1. Видеореклама в России</a> <span class="case-tag example">Пример</span></h4>
 
             <div class="ui-screenshot">
                 <a href="images/case-video-ads.png" target="_blank">
@@ -239,7 +310,7 @@
         </div>
 
         <div class="example-case">
-            <h4><a href="images/case-panama.png" target="_blank">Кейс 2. Panama Canal Traffic</a> <span class="case-tag example">Пример</span></h4>
+            <h4 id="ex-case-panama"><a href="images/case-panama.png" target="_blank">Кейс 2. Panama Canal Traffic</a> <span class="case-tag example">Пример</span></h4>
 
             <div class="ui-screenshot">
                 <a href="images/case-panama.png" target="_blank">
@@ -270,7 +341,7 @@
         </div>
 
         <div class="example-case">
-            <h4><a href="images/case-chicken-rolls.png" target="_blank">Кейс 3. Street-Style Chicken Rolls</a> <span class="case-tag example">Пример</span></h4>
+            <h4 id="ex-case-chicken"><a href="images/case-chicken-rolls.png" target="_blank">Кейс 3. Street-Style Chicken Rolls</a> <span class="case-tag example">Пример</span></h4>
 
             <div class="ui-screenshot">
                 <a href="images/case-chicken-rolls.png" target="_blank">
@@ -293,7 +364,7 @@
         <p>Примеры по 9 категориям с картинками из ТЗ.</p>
 
         <!-- 5.1 -->
-        <h3 class="subsection-title green">5.1. Графики и диаграммы данных</h3>
+        <h3 class="subsection-title green" id="ex-cat-1">5.1. Графики и диаграммы данных</h3>
 
         <h4 class="example-subhead green">Столбчатые диаграммы (bar)</h4>
         <p>Это график в виде вертикальных или горизонтальных столбцов, высота или длина каждого из которых пропорциональна соответствующим им значениям.</p>
@@ -349,7 +420,7 @@
         </div>
 
         <!-- 5.2 -->
-        <h3 class="subsection-title green">5.2. Схемы процессов и структур</h3>
+        <h3 class="subsection-title green" id="ex-cat-2">5.2. Схемы процессов и структур</h3>
 
         <h4 class="example-subhead green">Блок-схемы (flowcharts)</h4>
         <div class="ui-screenshot">
@@ -385,7 +456,7 @@
         </div>
 
         <!-- 5.3 -->
-        <h3 class="subsection-title green">5.3. Mind maps / Roadmaps / Concept maps и графы</h3>
+        <h3 class="subsection-title green" id="ex-cat-3">5.3. Mind maps / Roadmaps / Concept maps и графы</h3>
 
         <h4 class="example-subhead green">Карты идей (mind maps)</h4>
         <p>Mind map — это диаграмма связей, где центральное понятие раскрывается через ветви и подветви.</p>
@@ -413,7 +484,7 @@
         </div>
 
         <!-- 5.4 -->
-        <h3 class="subsection-title green">5.4. Презентационные слайды</h3>
+        <h3 class="subsection-title green" id="ex-cat-4">5.4. Презентационные слайды</h3>
 
         <h4 class="example-subhead green">Слайды с заголовком и буллитами (title+bullets)</h4>
         <p>Буллиты — это значки, которые используют для выделения пунктов списка: галочки, точки, цифры, иконки.</p>
@@ -462,7 +533,7 @@
         </div>
 
         <!-- 5.5 -->
-        <h3 class="subsection-title green">5.5. Плакаты, one-pagers, лонгрид-инфографика</h3>
+        <h3 class="subsection-title green" id="ex-cat-5">5.5. Плакаты, one-pagers, лонгрид-инфографика</h3>
 
         <h4 class="example-subhead green">Вертикальные постеры</h4>
         <div class="ui-screenshot">
@@ -478,8 +549,9 @@
                 <img src="images/cat-longread.png" alt="Пояснительное полотно — Виктор Цой">
             </a>
             <div class="ui-screenshot-caption">«Виктор Цой — Карта истории» — лонгрид</div>
-        </div>        <!-- 5.6 -->
-        <h3 class="subsection-title green">5.6. Таблицы, матрицы, сравнения</h3>
+        </div>
+        <!-- 5.6 -->
+        <h3 class="subsection-title green" id="ex-cat-6">5.6. Таблицы, матрицы, сравнения</h3>
 
         <h4 class="example-subhead green">Сравнительные таблицы (comparison tables)</h4>
         <div class="ui-screenshot">
@@ -498,7 +570,7 @@
         </div>
 
         <!-- 5.7 -->
-        <h3 class="subsection-title green">5.7. Инструкции и пошаговые гайды</h3>
+        <h3 class="subsection-title green" id="ex-cat-7">5.7. Инструкции и пошаговые гайды</h3>
 
         <h4 class="example-subhead green">Инструкционные инфографики. Пошаговые руководства</h4>
         <div class="ui-screenshot">
@@ -533,7 +605,7 @@
         </div>
 
         <!-- 5.8 -->
-        <h3 class="subsection-title green">5.8. Навигационные схемы</h3>
+        <h3 class="subsection-title green" id="ex-cat-8">5.8. Навигационные схемы</h3>
 
         <h4 class="example-subhead green">Схемы метро / помещений / локаций</h4>
         <div class="ui-screenshot">
@@ -544,7 +616,7 @@
         </div>
 
         <!-- 5.9 -->
-        <h3 class="subsection-title green">5.9. Чек-листы с визуальной структурой</h3>
+        <h3 class="subsection-title green" id="ex-cat-9">5.9. Чек-листы с визуальной структурой</h3>
 
         <h4 class="example-subhead green">Structured checklists</h4>
         <div class="ui-screenshot">
@@ -573,7 +645,7 @@
 
         <p>Можно считать подпись именем за вотермарку, так как это идёт «защита и авторство». Так же фраза <strong>design by Freepik</strong> — это не про бренд. Она не относится к сути инфографики, это «авторство».</p>
 
-        <h4 class="example-subhead green">Пример: инфографика с брендированием</h4>
+        <h4 class="example-subhead green" id="ex-brand-export">Пример: инфографика с брендированием</h4>
         <div class="ui-screenshot">
             <a href="images/branding-export.png" target="_blank">
                 <img src="images/branding-export.png" alt="Инфографика — сельхозпродукция на экспорт">
@@ -581,7 +653,7 @@
             <div class="ui-screenshot-caption">«Какую сельхозпродукцию мы продаём за рубеж» — с логотипом, подписью автора и источниками</div>
         </div>
 
-        <h4 class="example-subhead green">Пример: авторство вместо бренда (design by Freepik)</h4>
+        <h4 class="example-subhead green" id="ex-brand-freepik">Пример: авторство вместо бренда (design by Freepik)</h4>
         <div class="ui-screenshot">
             <a href="images/branding-freepik.png" target="_blank">
                 <img src="images/branding-freepik.png" alt="Business Infographic — design by Freepik">
@@ -589,7 +661,7 @@
             <div class="ui-screenshot-caption">Business Infographic с «designed by freepik» — это авторство, а не бренд компании</div>
         </div>
 
-        <h4 class="example-subhead green">Пример: фирменный стиль компании</h4>
+        <h4 class="example-subhead green" id="ex-brand-alfa">Пример: фирменный стиль компании</h4>
         <div class="ui-screenshot">
             <a href="images/branding-alfa.png" target="_blank">
                 <img src="images/branding-alfa.png" alt="Альфа-Банк — Бизнесу">
