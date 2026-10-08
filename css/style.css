@@ -1539,3 +1539,112 @@ h4.subsection-title a:hover,
     font-style: italic;
     margin-top: 8px;
 }
+/* ================================================================
+   РАСКРЫВАЮЩЕЕСЯ ДЕРЕВО В ЛЕВОМ САЙДБАРЕ (для examples.html, tz.html)
+   ================================================================ */
+
+/* Обёртка одного пункта дерева */
+.sidebar-tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-tree > li {
+    margin: 0 0 2px;
+}
+
+/* Кнопка-раздел (верхний уровень) */
+.sidebar-tree details > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 7px 10px 7px 12px;
+    color: #6b5440;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sidebar-tree details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar-tree details > summary::after {
+    content: "▸";
+    font-size: 11px;
+    color: #b98a5a;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.sidebar-tree details[open] > summary::after {
+    transform: rotate(90deg);
+}
+
+.sidebar-tree details > summary:hover {
+    color: #6b3f1d;
+    background: #fbf3e3;
+    border-left-color: #b98a5a;
+}
+
+/* Ссылка-раздел (если у пункта нет подпунктов) */
+.sidebar-tree > li > a {
+    display: block;
+    padding: 7px 10px 7px 12px;
+    color: #6b5440;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    transition: all 0.15s;
+}
+
+.sidebar-tree > li > a:hover {
+    color: #6b3f1d;
+    background: #fbf3e3;
+    border-left-color: #b98a5a;
+}
+
+/* Список подпунктов внутри раскрытого раздела */
+.sidebar-tree details ul {
+    list-style: none;
+    margin: 2px 0 6px;
+    padding: 0 0 0 10px;
+}
+
+.sidebar-tree details ul li {
+    margin: 0;
+}
+
+.sidebar-tree details ul a {
+    display: block;
+    padding: 5px 10px 5px 14px;
+    color: #8b6b4a;
+    text-decoration: none;
+    font-size: 12.8px;
+    line-height: 1.4;
+    border-left: 2px solid #ece0cb;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.15s;
+}
+
+.sidebar-tree details ul a:hover {
+    color: #6b3f1d;
+    background: #fbf3e3;
+    border-left-color: #b98a5a;
+}
+
+/* Подсветка активного подпункта (если браузер поддерживает :target) */
+.sidebar-tree details ul a:target {
+    color: #6b3f1d;
+    font-weight: 700;
+    border-left-color: #8b5a2b;
+    background: #fbf3e3;
+}
