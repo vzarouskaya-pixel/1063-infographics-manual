@@ -183,7 +183,9 @@ main li::marker {
     .cards .card:nth-child(5) {
         grid-column: 4 / span 2;
     }
-}/* ============ КНОПКА «НАЗАД» ============ */
+}
+
+/* ============ КНОПКА «НАЗАД» ============ */
 .back-link {
     display: inline-block;
     margin: 24px 0 4px;
@@ -248,7 +250,6 @@ main h1 {
     color: #8b5a2b;
     border-bottom-color: #8b5a2b;
 }
-
 /* ============ ПРИМЕРЫ ОШИБОК ============ */
 .error-case {
     background: #fffaf0;
@@ -480,7 +481,8 @@ main h1 {
 
 .accordion-body > *:last-child {
     margin-bottom: 0;
-}/* ============ БЕЙДЖИ ПОЛЕЙ ============ */
+}
+/* ============ БЕЙДЖИ ПОЛЕЙ ============ */
 .field-card {
     background: #fffdf8;
     border-radius: 10px;
@@ -821,7 +823,6 @@ main h1 {
     font-style: italic;
     font-size: 14px;
 }
-
 /* ================================================================
    ДОПОЛНЕНИЯ ДЛЯ ПРИМЕРОВ (examples.html)
    ================================================================ */
@@ -907,7 +908,9 @@ main h1 {
     padding: 1px 8px;
     border-radius: 4px;
     white-space: nowrap;
-}/* ================================================================
+}
+
+/* ================================================================
    ПРАВЫЙ САЙДБАР С ОГЛАВЛЕНИЕМ (для examples.html)
    ================================================================ */
 
@@ -1152,9 +1155,9 @@ html {
     background: #d4edda;
     color: #1b5e20;
 }
-
 /* ================================================================
-   ВРЕЗКИ СО СКРИНШОТАМИ ИНТЕРФЕЙСА (для tz.html, overview.html)
+   ВРЕЗКИ СО СКРИНШОТАМИ ИНТЕРФЕЙСА (для tz.html, overview.html,
+   examples.html, errors.html)
    ================================================================ */
 .ui-screenshot {
     margin: 20px 0;
@@ -1168,20 +1171,26 @@ html {
 .ui-screenshot a {
     display: inline-block;
     border-bottom: none;
+    max-width: 100%;
 }
 
+/* Картинка по умолчанию — компактная, до 480 px */
 .ui-screenshot img {
-    max-width: 100%;
+    display: block;
+    max-width: 480px;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
     border-radius: 6px;
     border: 1px solid #e2d4b8;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: zoom-in;
 }
 
+/* При наведении — лёгкое увеличение + тень */
 .ui-screenshot img:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 20px rgba(74, 50, 32, 0.15);
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(74, 50, 32, 0.18);
 }
 
 .ui-screenshot-caption {
@@ -1200,6 +1209,9 @@ html {
     }
     .ui-screenshot-caption {
         font-size: 13px;
+    }
+    .ui-screenshot img {
+        max-width: 100%;
     }
 }
 
@@ -1539,6 +1551,7 @@ h4.subsection-title a:hover,
     font-style: italic;
     margin-top: 8px;
 }
+
 /* ================================================================
    РАСКРЫВАЮЩЕЕСЯ ДЕРЕВО В ЛЕВОМ САЙДБАРЕ (для examples.html, tz.html)
    ================================================================ */
