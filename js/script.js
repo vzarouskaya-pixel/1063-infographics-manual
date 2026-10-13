@@ -69,7 +69,6 @@ const searchIndex = [
 
     // ===== Раздел 7: Примеры =====
     { title: "Примеры разметки", page: "examples.html", anchor: "", keywords: "пример видеореклама россия панама canal chicken rolls разметка кейс" },
-
     // ===== Разделы страницы Примеры =====
     { title: "Что НЕ берём — контрпримеры", page: "examples.html", anchor: "#ex-no", keywords: "мем реклама постер сплошной текст не берём контрпример" },
     { title: "Что берём — примеры", page: "examples.html", anchor: "#ex-ok", keywords: "берём примеры roadmap caldo бизнес-слайд" },
@@ -93,6 +92,7 @@ const searchIndex = [
     { title: "Вид 13: Сильная мыльность, пикселизация", page: "errors.html", anchor: "#err-13", keywords: "ошибка мыльность пикселизация плохое качество" },
     { title: "Вид 14: Сильная постеризация, очень плохое качество", page: "errors.html", anchor: "#err-14", keywords: "ошибка постеризация очень плохое качество" },
     { title: "Вид 15: Неорганичный коллаж, скучная инфографика", page: "errors.html", anchor: "#err-15", keywords: "ошибка коллаж неорганичный скучная инфографика" },
+    { title: "Вид 16: Не тот тип инфографики для категории 5.2", page: "errors.html", anchor: "#err-16", keywords: "ошибка не тот тип инфографики категория 5.2 схемы процессов и структур блок-схемы flowchart пайплайны pipelines блочные диаграммы block diagrams организационные структуры org charts" },
 
     // ===== FAQ (страница faq.html) =====
     { title: "№1. Схемы структуры разных подразделений", page: "faq.html", anchor: "#faq-1", keywords: "схема структура подразделение организация должности ошибка" },
@@ -198,6 +198,7 @@ function initSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', initSearch);
+
 /* ================================================================
    ТЕСТЫ: интерактивная логика со счётчиком и разбором
    ================================================================
@@ -213,7 +214,6 @@ const quizState = {
     total: 0,
     right: 0
 };
-
 function initQuiz() {
     const progress = document.getElementById('quiz-progress');
     if (!progress) return; // на этой странице тестов нет
