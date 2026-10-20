@@ -1661,3 +1661,99 @@ h4.subsection-title a:hover,
     border-left-color: #8b5a2b;
     background: #fbf3e3;
 }
+
+/* ================================================================
+   ФОРМА ВХОДА (JS-пароль)
+   ================================================================ */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(74, 50, 32, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: #fffaf0;
+    border-radius: 16px;
+    padding: 32px 28px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 12px 40px rgba(74, 50, 32, 0.25);
+    text-align: center;
+    font-family: 'Lora', Georgia, serif;
+}
+
+.auth-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    color: #4a2c14;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.auth-hint {
+    font-size: 14px;
+    color: #8b6b4a;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
+    color: #4a3220;
+    background: #fffdf8;
+    border: 2px solid #e2d4b8;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.auth-input:focus {
+    border-color: #b98a5a;
+    box-shadow: 0 0 0 3px rgba(185, 138, 90, 0.18);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px 16px;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fffaf0;
+    background: #8b5a2b;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.auth-button:hover {
+    background: #6b3f1d;
+}
+
+.auth-button:active {
+    transform: scale(0.98);
+}
+
+.auth-error {
+    color: #c0392b;
+    font-size: 14px;
+    margin-top: 12px;
+    min-height: 20px;
+    font-style: italic;
+}
